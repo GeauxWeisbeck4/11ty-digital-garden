@@ -1,0 +1,10 @@
+{
+    "title": "11ty Digital Garden",
+    "url": "https://11ty-digital-garden.netlify.app",
+    "siteUrl": "https://11ty-digital-garden.netlify.app",
+    "author": {
+        "name": "Grug Developer",
+        "email": "grugdeveloper@gmail.com",
+        "github": "https://github.com/grug-developer/"
+    }
+}
