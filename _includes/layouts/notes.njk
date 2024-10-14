@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+section: notes
+permalink: /notes/index.html
+---
+<div class="container">
+    <h1>{{ title }}</h1>
+</div>
+
+{{ layoutContent | safe }}
+
+{% set noteslist = collections.notes %}
+{% include "components/noteslist.njk" %}

@@ -1,0 +1,8 @@
+<div class="container">
+    {% set noteslist = collections.notes %}
+        {% for note in noteslist | reverse %}
+        <a class="note-item" href="{{ note.url | url }}">
+            <h2 class="home-title">{{ note.data.title }}</h2>
+        </a>
+        {% endfor %}
+</div>

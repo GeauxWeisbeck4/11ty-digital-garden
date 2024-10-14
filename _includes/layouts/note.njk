@@ -17,3 +17,25 @@ section: note
         <p>
         {% for tag in tags %}
             {%- if tag != "note" -%}
+                {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+                <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+            {%- endif -%}
+        {% endfor %}
+        </p>
+    {% endif %}
+
+    <hr><br>
+
+    {{ layoutContent | safe }}
+
+</div>
+
+<div class="container">
+<h4>Recent Notes</h4>
+{% set noteslist = collections.notesLatest %}
+    {% for note in noteslist | reverse %}
+    <a class="note-item" href="{{ note.url | url }}">
+        <h2 class="home-title">{{ note.data.title }}</h2>
+    </a>
+    {% endfor %}
+</div>
