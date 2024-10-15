@@ -23,6 +23,16 @@
   "homepage": "https://github.com/geauxweisbeck4/11ty-digital-garden#readme",
   "type": "module",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "clean-css": "^5.3.3",
+    "feather-icons": "^4.29.2",
+    "highlight.js": "^11.10.0",
+    "html-minifier": "^4.0.0",
+    "local-web-server": "^5.4.0",
+    "uglify-js": "^3.19.3"
+  },
+  "devDependencies": {
+    "luxon": "^3.5.0",
+    "markdown-it": "^14.1.0"
   }
 }
