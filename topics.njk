@@ -1,0 +1,23 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: topic
+  filter
+    - all
+    - nav
+    - note
+    - notes
+permalink: /topics/{{ topic }}/
+layout: layouts/base.njk
+---
+
+<div class="container">
+    <h1>Topic: {{ topic }}</h1>
+</div>
+
+{% set noteslist = collections.[ topic ] %}
+{% include "components/noteslist.njk" %}
+
+<div class="container">
+    <p><a href="{{ '/' | url }}">← Back to all notes</a>

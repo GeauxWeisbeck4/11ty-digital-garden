@@ -13,12 +13,12 @@ section: note
         </small>
     </p>
 
-    {% if tags %}
+    {% if topics %}
         <p>
-        {% for tag in tags %}
-            {%- if tag != "note" -%}
-                {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-                <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+        {% for topic in topics %}
+            {%- if topic != "note" -%}
+                {% set topicUrl %}/tags/{{ topic }}/{% endset %}
+                <a href="{{ topicUrl | url }}" rel="topic">{{ topic }}</a>
             {%- endif -%}
         {% endfor %}
         </p>

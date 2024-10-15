@@ -3,7 +3,7 @@ import CleanCSS from "clean-css";
 import UglifyJS from "uglify-js";
 import htmlmin from "html-minifier";
 
-export default function (eleventyConfig) {
+export default async function (eleventyConfig) {
 
     eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 

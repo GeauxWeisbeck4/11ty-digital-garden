@@ -2,7 +2,7 @@
 title: My Eighth Note
 summary: This is an example note, showcasing what it looks like.
 date: 2024-10-14
-tags:
+topics:
   - example
   - charts
 ---

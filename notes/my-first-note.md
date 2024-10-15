@@ -2,7 +2,7 @@
 title: My First Note
 summary: This is an example note, showcasing what it looks like.
 date: 2024-10-13
-tags:
+topics:
   - example
   - first
 ---
