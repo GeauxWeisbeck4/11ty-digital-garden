@@ -1,9 +1,11 @@
-import { DateTime } from "luxon";
-import CleanCSS from "clean-css";
-import UglifyJS from "uglify-js";
-import htmlmin from "html-minifier";
+const { DateTime } = require("luxon");
+const CleanCSS = require("clean-css");
+const UglifyJS = require("uglify-js");
+const htmlmin = require("html-minifier");
+const cacheBuster = require("@mightyplow/eleventy-plugin-cache-buster");
 
-export default async function (eleventyConfig) {
+module.exports = function(eleventyConfig) {
+    eleventyConfig.addPlugin(cacheBuster({}));
 
     eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
@@ -50,27 +52,6 @@ export default async function (eleventyConfig) {
         return collection.getAllSorted().filter(function(item) {
             return item.inputPath.match(/^\.\/posts\//) !== null;
         });
-    });
-
-    // Only content in the latest 'posts/' directory
-    eleventyConfig.addCollection("postsLatest", function(collection) {
-        return collection
-          .getFilteredByGlob('**/posts/*.md')
-          .slice(-9)
-    });
-
-    // Only content in the 'notes/' directory
-    eleventyConfig.addCollection("notes", function(collection) {
-        return collection.getAllSorted().filter(function(item) {
-            return item.inputPath.match(/^\.\/notes\//) !== null;
-        });
-    });
-
-    // Only content in the latest 'notes/' directory
-    eleventyConfig.addCollection("notesLatest", function(collection) {
-        return collection
-          .getFilteredByGlob('**/notes/*.md')
-          .slice(-9)
     });
 
     // Don't process folders with static assets e.g. images

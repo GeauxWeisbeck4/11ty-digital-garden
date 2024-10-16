@@ -1,41 +1,8 @@
 ---
-layout: layouts/base-post.njk
-section: note
+layouts: layouts/base.njk
 ---
 
-<div class="container">
-
-    <h1>{{ title }}</h1>
-
-    <p>
-        <small>
-            <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time>
-        </small>
-    </p>
-
-    {% if topics %}
-        <p>
-        {% for topic in topics %}
-            {%- if topic != "note" -%}
-                {% set topicUrl %}/tags/{{ topic }}/{% endset %}
-                <a href="{{ topicUrl | url }}" rel="topic">{{ topic }}</a>
-            {%- endif -%}
-        {% endfor %}
-        </p>
-    {% endif %}
-
-    <hr><br>
-
-    {{ layoutContent | safe }}
-
-</div>
-
-<div class="container">
-<h4>Recent Notes</h4>
-{% set noteslist = collections.notesLatest %}
-    {% for note in noteslist | reverse %}
-    <a class="note-item" href="{{ note.url | url }}">
-        <h2 class="home-title">{{ note.data.title }}</h2>
-    </a>
-    {% endfor %}
+<div class="content">
+    <h2 class="content-title">{{ title }}</h2>
+    {{ content | safe }}
 </div>
