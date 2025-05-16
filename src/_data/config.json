@@ -1,0 +1,91 @@
+{
+  "title": "11ty Digital Garden",
+  "url": "/",
+  "domain": "https://11ty-digital-garden.netlify.app",
+  "language": "en",
+  "logoUrl": "/",
+  "search": true,
+  "showCookiesAdvice": false,
+  "cookiesAdviceText": "Cookies advice text",
+  "cookiesAdviceMoreInfoAnchor": "More Info",
+  "cookiesAdviceMoreInfoUrl": "/cookies",
+  "googleAnalyticsID": "",
+  "footerLinks": [
+    {
+      "anchor": "Legal",
+      "url": "#"
+    },
+    {
+      "anchor": "Cookies Advice",
+      "url": "#"
+    },
+    {
+      "anchor": "Privacy Policy",
+      "url": "#"
+    },
+    {
+      "anchor": "Terms & Conditions",
+      "url": "#"
+    },
+    {
+      "anchor": "Other Digital Gardeners",
+      "url": "#"
+    }
+  ],
+  "navbarMenu": [
+    {
+      "anchor": "Home",
+      "url": "/"
+    },
+    {
+      "anchor": "About",
+      "url": "/about"
+    }
+  ],
+  "navDropDown": [
+    {
+      "anchor": "Notes Catalog",
+      "url": "/notes"
+    },
+    {
+      "anchor": "Daily Journal",
+      "url": "/journal"
+    },
+    {
+      "anchor": "Content",
+      "url": "/blog"
+    },
+    {
+      "anchor": "Portfolio",
+      "url": "/portfolio"
+    },
+    {
+      "anchor": "Resources",
+      "url": "/resources"
+    }
+  ],
+  "navbarButtons": [
+    {
+      "anchor": "Support",
+      "class": "is-small is-success",
+      "url": "/support"
+    },
+    {
+      "anchor": "Download",
+      "class": "is-small is-primary",
+      "url": "https://github.com/geauxweisbeck4/11ty-digital-garden"
+    }
+  ],
+  "social": {
+    "facebook": "https://facebook.com",
+    "twitter": "https://twitter.com",
+    "mastadon": "https://mastadon.com",
+    "threads": "https://threads.net",
+    "github": "https://github.com",
+    "bluesky": "https://bluesky.com"
+  },
+  "showShareButton": true,
+  "showDate": true,
+  "showRelatedPosts": true,
+  "relatedPostsTitle": "Related Posts"
+}

@@ -1,0 +1,10 @@
+<div class="content">
+  <ol reversed type="i" style="--articlelist-index: {{ (articleslistCounter or articleslist.length) + 1 }}">
+    {%- for article in articlelist | reverse %}
+    <li class="articlelist-item{% if article.url == url %} articlelist-item-active{% endif %}">
+      <a href="{{ article.url }}" class="has-text-link">{% if article.data.title %}{{ article.data.title }}{% else %}<code>{{ article.url }}</code>{% endif %}</a>
+      <time datetime="{{ article.date | htmlDateString }}">{{ article.date | readableDate("LLLL yyyy") }}</time>
+    </li>
+  {%- endfor %}
+  </ol>
+</div>

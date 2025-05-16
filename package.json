@@ -23,10 +23,13 @@
   },
   "homepage": "https://github.com/geauxweisbeck4/11ty-digital-garden#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^6.0.4",
+    "luxon": "^3.6.1"
   },
   "dependencies": {
     "@11ty/eleventy-navigation": "^1.0.4",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1",
     "browserslist": "^4.24.5",
     "bulma": "^1.0.4",
