@@ -40,6 +40,26 @@
     {
       "anchor": "About",
       "url": "/about"
+    },
+    {
+      "anchor": "Notes",
+      "url": "/notes"
+    },
+    {
+      "anchor": "Journal",
+      "url": "/journal"
+    },
+    {
+      "anchor": "Content",
+      "url": "/blog"
+    },
+    {
+      "anchor": "Portfolio",
+      "url": "/portfolio"
+    },
+    {
+      "anchor": "Resources",
+      "url": "/resources"
     }
   ],
   "navDropDown": [
@@ -72,7 +92,7 @@
     },
     {
       "anchor": "Download",
-      "class": "is-small is-primary",
+      "class": "is-small is-info",
       "url": "https://github.com/geauxweisbeck4/11ty-digital-garden"
     }
   ],
