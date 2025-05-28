@@ -1,6 +1,8 @@
 ---
 title: 11ty Digital Garden
 ---
+<!DOCTYPE html>
+<html lang="{{ config.language }}">
 {% include "../head.njk" %}
 <header>
   {% include "../navbar.njk" %}
@@ -8,4 +10,5 @@ title: 11ty Digital Garden
 <body>
   {{ content | safe }}
 </body>
+  {% include "../footer.njk" %}
 </html>

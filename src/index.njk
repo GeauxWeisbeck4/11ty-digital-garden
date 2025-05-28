@@ -8,6 +8,7 @@ eleventyNavigation:
 
 <section class="hero is-medium">
   <div class="hero-body">
+    <div class="container content">
     <h1 class="title">
       Welcome to my Digital Garden
     </h1>
@@ -18,22 +19,19 @@ eleventyNavigation:
       <a href="/contribute" class="button is-primary">Contribute</a>
       <a href="" class="button is-link">Source Code</a>
     </div>
-    
+    </div>
   </div>
 </section>
 
-<section class="container">
+<section class="section">
   <div class="container">
-    <h2 class="subtitle">Feel free to explore and connect with me!</p>
-    <p>Check out my <a href="/about">about page</a> to learn more about me.</p>
-    <p>Here are some of my latest notes:</p>
-    <ul>
-      {% for note in collections.notes %}
-        <li><a href="{{ note.url }}">{{ note.data.title }}</a></li>
-      {% endfor %}
+    <h1 class="title">Recent Journal Entries</h1>
+    <p class="subtitle">Journals are a great place to start out sharing ideas, thoughts, and project notes that you are on with others.</p>
+    <div class="columns">
+      <div class="column is-two-thirds">
+        {% include "layouts/postslist.njk" %}
+      </div>
+      <div class="column is-one-thirds"><!-- Placeholder for Table of Journal entries --></div>
+    </div>
   </div>
 </section>
-  
-
-
-

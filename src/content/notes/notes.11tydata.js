@@ -1,6 +1,4 @@
 export default {
-  tags: [
-    "notes"
-  ],
-  "layout": "layouts/note.njk",
-}
+  tags: ["notes"],
+  layout: "layouts/note.njk",
+};

@@ -61,29 +61,7 @@
       "anchor": "Resources",
       "url": "/resources"
     }
-  ],
-  "navDropDown": [
-    {
-      "anchor": "Notes Catalog",
-      "url": "/notes"
-    },
-    {
-      "anchor": "Daily Journal",
-      "url": "/journal"
-    },
-    {
-      "anchor": "Content",
-      "url": "/blog"
-    },
-    {
-      "anchor": "Portfolio",
-      "url": "/portfolio"
-    },
-    {
-      "anchor": "Resources",
-      "url": "/resources"
-    }
-  ],
+  ], 
   "navbarButtons": [
     {
       "anchor": "Support",

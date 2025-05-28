@@ -34,6 +34,8 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPlugin(HtmlBasePlugin);
   eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 
+
+
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",
     outputPath: "/feed/feed.xml",
@@ -85,7 +87,46 @@ export default async function(eleventyConfig) {
     // slugify: eleventyConfig.getFilter("slugify"),
     // sleector: "h1,h2,h3,h4,h5,h6", 
     // default
-  })
+  });
+
+  // Get the first `n` elements of a collection
+  // Credit to `https://github.com/mjgs/eleventy-agile-blog` for tags
+  eleventyConfig.addFilter("head", (array, n) => {
+    if(n < 0) {
+      return array.slice(n);
+    }
+
+    return array.slice(0, n);
+  });
+
+  eleventyConfig.addCollection("tagList", function(collection) {
+    let tagSet = new Set();
+    collection.getAll().forEach(function(item) {
+      if("tags" in item.data) {
+        let tags = item.data.tags;
+
+        tags = tags.filter(function(item) {
+          switch(item) {
+            // list matches the `filter` list in tags.njk
+            case "all":
+            case "nav":
+            case "post":
+            case "posts":
+              return false;
+          }
+
+          return true;
+        });
+
+        for (const tag of tags) {
+          tagSet.add(tag);
+        }
+      }
+    });
+
+    // Return an array in addCollection
+    return [...tagSet];
+  });
 
   return {
     templateFormats: [

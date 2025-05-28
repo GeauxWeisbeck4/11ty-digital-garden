@@ -1,0 +1,7 @@
+{%- for post in collections.posts -%}
+  <article class="container">
+    <div class="columns">
+        <p class="column title is-two-thirds"><a href="{{ post.url }}">{{ post.data.title }}</a></p> 
+    </div>
+  </article>
+{%- endfor -%}
